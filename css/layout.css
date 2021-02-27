@@ -20,8 +20,16 @@
         margin: 2px;
         border: solid 4px #224a54;
         color:white; font-size:18pt; 
-        text-align:left; font-weight:bold; height:70px;
+        text-align:left; font-weight:bold; height:70px; 
       }
+      #divSearch {
+        display: block;
+        position: absolute;
+        z-index: auto;
+        top: 25px;
+        right: 75px;
+        }
+    
       #subheader {
         font-size:small;
         color:white;
