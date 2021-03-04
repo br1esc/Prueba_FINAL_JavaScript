@@ -25,10 +25,24 @@
       #divSearch {
         display: block;
         position: absolute;
-        z-index: auto;
+        z-index: 3;
         top: 25px;
-        right: 75px;
+        right: 1525px;
+        border: 1px;
+        border-width: 100px;
         }
+
+      #bottom-right {
+        display: block;
+        position: absolute;
+        z-index: 6;
+        width: 120px;
+        top: 325px;
+        right: 525px;
+        border-color: black;
+        border-style: solid;
+        border:thick;
+      }
     
       #subheader {
         font-size:small;
