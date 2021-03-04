@@ -4,21 +4,23 @@ require(["esri/map",
     "esri/geometry/Extent",
     "esri/layers/ArcGISDynamicMapServiceLayer",
     "esri/layers/FeatureLayer",
+
     "esri/dijit/Scalebar",
     "esri/dijit/Legend",
     "esri/dijit/BasemapGallery",
     "esri/dijit/Search",
+    "esri/dijit/OverviewMap",
 
     "dojo/on",
     "dojo/parser",
     "dojo/ready",
+    "dojo/domReady!",
 
     "dijit/layout/TabContainer",
     "dijit/layout/ContentPane",
-    "dijit/layout/BorderContainer",
-    "dojo/domReady!"],
+    "dijit/layout/BorderContainer"],
     function (
-        Map, Extent, ArcGISDynamicMapServiceLayer, FeatureLayer, Scalebar, Legend, BasemapGallery, Search,
+        Map, Extent, ArcGISDynamicMapServiceLayer, FeatureLayer, Scalebar, Legend, BasemapGallery, Search, OverviewMap,
         on, parser, ready,
         TabContainer, ContentPane, BorderContainer) {
         ready(function () {
@@ -92,6 +94,16 @@ require(["esri/map",
                 visible: true
             }, "divSearch");
             dijitSearch.startup();
+
+            var Overview = new OverviewMap({
+                map : map,
+                visible: true,
+                attachTo: "bottom-right",
+                h: 220,
+                w:400
+            
+              });
+              Overview.startup();
 
         });
 
